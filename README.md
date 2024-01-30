@@ -12,17 +12,17 @@ Learn how to make money online using Python! In this video, you will see how to 
 
 
 ## Get to Know Me & Stay Connected
-- 📺 **YouTube:** [CodingIsFun](https://youtube.com/c/CodingIsFun)
-- 🌐 **Website:** [PythonAndVBA](https://pythonandvba.com)
-- 💬 **Discord:** [Join our Community](https://pythonandvba.com/discord)
-- 💼 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/sven-bosau/)
-- 📸 **Instagram:** [Follow me](https://www.instagram.com/codingisfun_official/)
+- 📺 **YouTube:** [Gustavo Mejía](https://www.youtube.com/channel/UCwboxEc1Y9jNt0TJrseKqYQ)
+- 🌐 **Website:** [Rosko.com](https://rosko-jenkins.streamlit.app/)
+- 💬 **Discord:** [Join our Community](https://discord.com/channels/1201908263738933328/1201908264514883597)
+- 💼 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/guztavo-mejia/)
+- 📸 **Instagram:** [Follow me](https://www.instagram.com/rosko.mx/)
 
 ## Support My Work
-Love my content and want to show appreciation? Why not [buy me a coffee](https://pythonandvba.com/coffee-donation) to fuel my creative engine? Your support means the world to me! 😊
+Love my content and want to show appreciation? Why not [buy me a coffee](https://buy.stripe.com/8wM17J2J5fgD2A0eUU) to fuel my creative engine? Your support means the world to me! 😊
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://pythonandvba.com/coffee-donation)
 
 ## Feedback
-Got some thoughts or suggestions? Don't hesitate to reach out to me at contact@pythonandvba.com. I'd love to hear from you! 💡
-![Logo](https://www.pythonandvba.com/banner-img)
+Got some thoughts or suggestions? Don't hesitate to reach out to me at guztavo.mejia@gmail.com. I'd love to hear from you! 💡
+!
