@@ -157,5 +157,5 @@ with columna1:
         unsafe_allow_html=True, #Desea incluir HTML unsafe? True
     )
 with right_col:
-    product_image = Image.open(DIR_ADJUNTOS / "_3bcabb31-19ce-46e1-a942-103e4e2c1921.jpg")
-    st.image(product_image, width=450)
+    cafecito_image = Image.open(DIR_ADJUNTOS / "_3bcabb31-19ce-46e1-a942-103e4e2c1921.jpg")
+    st.image(cafecito_image, width=450)
