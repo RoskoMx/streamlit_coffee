@@ -13,7 +13,7 @@ ARCH_CSS = DIR_ESTILOS / "main.css"
 # --- CONFIGURACIONES DE VARIABLES GENERALES ---
 ENLACE_DONACION = "https://buy.stripe.com/8wM17J2J5fgD2A0eUU"
 EMAIL_CONTACTO = "GUZTAVO.MEJIA@GMAIL.COM"
-VIDEO_TUTORIAL = "https://www.youtube.com/watch?v=L_5IUq0SgM8"
+VIDEO_TUTORIAL = "https://www.youtube.com/watch?v=HQdZgEL2Xbs"
 NOMBRE_PRODUCT = "Présentation du projet"
 NOMBRE_PRODUCT1 = "Technologie pour les débutants"
 SLOGAN_PRODUCTO = "L'intelligence Artificiale pour les débutants. 🫵"
@@ -22,11 +22,14 @@ Page Internet conçue pour faciliter l'approche
 des personnes extérieures à la technologie, qui 
 souhaitent rendre leur entreprise visible sur Internet:
 
+
 - Avec des instructions simples
 - Sans rien installer sur votre ordinateur
 - Accompagnement personnalisé
 - S'appuyer sur des outils d'intelligence artificielle
 - ... Et bien d’autres options incroyables à explorer
+
+
 **Vous acquérez un nouveau super pouvoir. Qu'allez-vous faire pour le développer?**
 """
 
@@ -48,7 +51,7 @@ load_css_file(ARCH_CSS)
 
 # --- SECCIÓN PRINCIPAL ---
 logo_image = Image.open(DIR_ADJUNTOS / "rosko_internet.png")
-st.image(logo_image, width=450)
+st.image(logo_image, width=300)
 st.header(NOMBRE_PRODUCT)
 st.subheader(SLOGAN_PRODUCTO)
 
@@ -99,8 +102,8 @@ for image, description in features.items():
 st.write("")
 st.write("---")
 st.subheader(":tv: Nous pouvons faire une vidéo où nous parlons différentes langues")
-#st.video(VIDEO_TUTORIAL, format="video/mp4", start_time=0)#Se puede modificar la hora de inicio
-youtube_image = Image.open(DIR_ADJUNTOS / "Te regalo una.png")
+st.video(VIDEO_TUTORIAL, format="video/mp4", start_time=0)#Se puede modificar la hora de inicio
+#youtube_image = Image.open(DIR_ADJUNTOS / "Te regalo una.png")
 st.image(youtube_image)
 
 
