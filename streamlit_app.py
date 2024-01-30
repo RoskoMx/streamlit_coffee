@@ -57,10 +57,10 @@ with left_col:
     st.text("")
     st.write(DESCRIPCION_PRODUCTO)
     #Se inserta un enlace HTML usando el elemento Markdown. Una opción para hacer el botón más atractivo con CSS, que se llamarpa más adelante
-    st.markdown(
-        f'<a href={ENLACE_DONACION} class="button"> 👉 Envoie-moi un petite café </a>',
-        unsafe_allow_html=True, #Desea incluir HTML unsafe? True
-    )
+    #st.markdown(
+        #f'<a href={ENLACE_DONACION} class="button"> 👉 Envoie-moi un petite café </a>',
+        #unsafe_allow_html=True, #Desea incluir HTML unsafe? True
+    #)
 with right_col:
     product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
     st.image(product_image, width=450)
@@ -139,3 +139,23 @@ contact_form = f"""
 
 #Para los detalles del fondo blanco, se crea una nueva carpeta llamada .streamlit con un archivo "config.toml
 st.markdown(contact_form, unsafe_allow_html=True)
+
+
+
+# --- OPCIÓN DE DONACIÓN ---
+st.write("")
+st.write("---")
+st.subheader("🧌 Offre-moi un petite café.")
+
+columna1, columna2 = st.columns((3, 1))
+with columna1:
+    st.text("")
+    st.write("Si vous avez aimé ce contenu ou le jugez utile, n'hésitez pas à m'offrir un délicieux café.")
+    #Se inserta un enlace HTML usando el elemento Markdown. Una opción para hacer el botón más atractivo con CSS, que se llamarpa más adelante
+    st.markdown(
+        f'<a href={ENLACE_DONACION} class="button"> 👉 Envoie-moi un petite café </a>',
+        unsafe_allow_html=True, #Desea incluir HTML unsafe? True
+    )
+with right_col:
+    product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
+    st.image(product_image, width=450)
