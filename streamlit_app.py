@@ -13,9 +13,9 @@ ARCH_CSS = DIR_ESTILOS / "main.css"
 # --- CONFIGURACIONES DE VARIABLES GENERALES ---
 ENLACE_DONACION = "https://buy.stripe.com/8wM17J2J5fgD2A0eUU"
 EMAIL_CONTACTO = "GUZTAVO.MEJIA@GMAIL.COM"
-VIDEO_TUTORIAL = "https://www.youtube.com/shorts/4AqZ8QUKeAA"
+VIDEO_TUTORIAL = "https://www.youtube.com/watch?v=L_5IUq0SgM8"
 NOMBRE_PRODUCT = "Présentation du projet"
-NOMBRE_PRODUCT1 = "L'internet pour mes parents"
+NOMBRE_PRODUCT1 = ":star: Technologie pour les débutants"
 SLOGAN_PRODUCTO = "L'intelligence Artificiale pour les débutants. 🫵"
 DESCRIPCION_PRODUCTO = """
 Page Internet conçue pour faciliter l'approche 
@@ -108,7 +108,6 @@ st.write("---")
 st.subheader(":raising_hand: FAQ Section")
 #Este es un diccionario donde la clave es la pregunta y su respuesta será su valor
 faq = {
-    "": "Some text goes here to answer question 1",
     "Est-il nécessaire de payer quelque chose pour utiliser tout cela?": "Dans ce projet, nous cherchons à rapprocher les gens de la technologie sans avoir à dépenser un seul euro",
     "Dois-je installer un certain type de programme sur mon ordinateur?": "Absolument rien, tous les outils que nous présentons ici sont disponibles sur internet",
     "Puis-je utiliser cet exemple de page pour créer mon propre projet?": "Bien entendu, il vous suffit d’inclure vos propres images et de décrire votre projet avec vos propres mots.",
