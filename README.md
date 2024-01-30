@@ -8,7 +8,7 @@ Proyectos fácilmente repicables sin la necesidad de instalar nada en tu ordenar
 ![Demo](./assets/demo.png?raw=true "Screenshot Website")
 
 ## Video Tutorial original del proyecto
-[![YouTube Video](https://img.youtube.com/vi/L_5IUq0SgM8/0.jpg)](https://youtu.be/L_5IUq0SgM8)
+[![YouTube Video](./assets/Te_regalo_una.png)](https://youtu.be/L_5IUq0SgM8)
 
 
 ## Me encuentras en las siguientes redes, hagamos crecer la comunidad
