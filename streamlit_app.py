@@ -47,7 +47,7 @@ load_css_file(ARCH_CSS)
 
 
 # --- SECCIÓN PRINCIPAL ---
-logo_image = Image.open(DIR_ADJUNTOS / "rosko_internet.jpg")
+logo_image = Image.open(DIR_ADJUNTOS / "_0e0a86c1-858e-47d3-9be4-ed929efacab6.jpg")
 st.image(logo_image, width=450)
 st.header(NOMBRE_PRODUCT)
 st.subheader(SLOGAN_PRODUCT)
@@ -62,32 +62,32 @@ with left_col:
         unsafe_allow_html=True, #Desea incluir HTML unsafe? True
     )
 with right_col:
-    product_image = Image.open(DIR_ADJUNTOS / "rosko2.jpg")
+    product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
     st.image(product_image, width=450)
 
 
 # --- MAYORES CARACTERÍSTICAS ---
 st.write("")
 st.write("---")
-st.subheader(":rocket: Ce que nous pouvons réaliser")
+st.subheader(":rocket: Ce que nous pouvons réaliser avec la generation des images.")
 #Creamos un diccionario que contiene la información de 3 secciones de características. Cada una debe tener: imagen, encabezado y descripción.
 #Nombre de la imágen, como clave del diccionario. El valor de esa clave será una lista[Dos elementos dentro, encabezado y explicación],
 features = {
-    "Feature_1.png": [
-        "Run Python Files From Excel",
-        "After locating your Python interpreter, you can execute Python files directly from Excel. In the Pro Version, you can also add several Python interpreter paths. This is helpful when you need to execute your Python code from different virtual environments.",
+    "chachi.jpg": [
+        "Créer des stickers",
+        "Créez des images amusantes de votre animal pour créer de nombreux autocollants et collez-les où vous le souhaitez.",
     ],
-    "Feature_2.png": [
-        "Create Pandas Dataframes",
-        "Generate Python files with a click of a button. Select the cell range you want to transform, and the add-in creates the Python code to read in the Excel data as a pandas dataframe.Instead of messing around with all of the available options in the pandas ‘read_excel’ method, the add-in does it for you.",
+    "_e7cf7aa0-d5f6-431e-b39a-6e40146f13ff.jpg": [
+        "Votre marque dans des produits incroyables",
+        "Créez des personnages géniaux en utilisant les produits de vos rêves grâce à la génération d'images.",
     ],
-    "Feature_3.png": [
-        "Create Jupyter Notebooks",
-        "Have you ever wanted to do some quick analysis of your Excel data in a Jupyter Notebook? MyToolBelt can convert an Excel cell range into a Jupyter Notebook. Just select the cell range, and the add-in will create a new Jupyter Notebook in the workbook’s directory. Inside the Jupyter Notebook, you will find your ready-to-use dataframe based on your selection. This feature is a real time saver!",
+    "french_guajolote2.jpg": [
+        "Des photographies presque réelles",
+        "Faites ressembler vos idées les plus folles à une vraie photo. Des instructions simples pour matérialiser les idées dans votre esprit.",
     ],
 }
 for image, description in features.items():
-    image = Image.open(ASSETS_DIR / image)
+    image = Image.open(DIR_ADJUNTOS / image)
     st.write("")
     left_col, right_col = st.columns(2)
     left_col.image(image, use_column_width=True)
