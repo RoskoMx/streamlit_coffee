@@ -13,6 +13,7 @@
   animation: bounce .6s infinite alternate;
 }
 
+/*Animación de rebote*/
 }
 @-webkit-keyframes bounce {
   to { -webkit-transform: scale(1.1); }
@@ -24,9 +25,12 @@
   to { transform: scale(1.1); }
 }
 
+
+
 .button:hover, .button:active {
   background-color: red;
 }
+
 
 /* Style inputs with type="text", type="email"and textareas */
 input[type=text], input[type=email], textarea {
@@ -40,8 +44,9 @@ input[type=text], input[type=email], textarea {
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
+/*Se oculta la marca optimizada, configurando la visibilidad del menú principal, el pie de página y el encabezado en oculto*/
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
-
+/*Una vez teniendo este archivo CSS, en el archivo .py definimos la función que toma una ruta de archivo como entrada*/
