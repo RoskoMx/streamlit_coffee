@@ -158,4 +158,4 @@ with columna1:
     )
 with columna2:
     cafecito_image = Image.open(DIR_ADJUNTOS / "_3bcabb31-19ce-46e1-a942-103e4e2c1921.jpg")
-    st.image(cafecito_image, width=125)
+    st.image(cafecito_image, width=200)
