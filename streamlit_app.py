@@ -147,7 +147,7 @@ st.write("")
 st.write("---")
 st.subheader("🧌 Offre-moi un petite café.")
 
-columna1, columna2 = st.columns((2, 1))
+columna1, columna2 = st.columns((3, 1))
 with columna1:
     st.text("")
     st.write("Si vous avez aimé ce contenu ou le jugez utile, n'hésitez pas à m'offrir un délicieux café.")
@@ -156,6 +156,6 @@ with columna1:
         f'<a href={ENLACE_DONACION} class="button"> 👉 Envoie-moi un petite café </a>',
         unsafe_allow_html=True, #Desea incluir HTML unsafe? True
     )
-with right_col:
+with columna2:
     cafecito_image = Image.open(DIR_ADJUNTOS / "_3bcabb31-19ce-46e1-a942-103e4e2c1921.jpg")
     st.image(cafecito_image, width=450)
