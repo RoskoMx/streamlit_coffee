@@ -147,7 +147,7 @@ st.write("")
 st.write("---")
 st.subheader("🧌 Offre-moi un petite café.")
 
-columna1, columna2 = st.columns((3, 1))
+columna1, columna2 = st.columns((2, 1))
 with columna1:
     st.text("")
     st.write("Si vous avez aimé ce contenu ou le jugez utile, n'hésitez pas à m'offrir un délicieux café.")
@@ -157,5 +157,5 @@ with columna1:
         unsafe_allow_html=True, #Desea incluir HTML unsafe? True
     )
 with right_col:
-    product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
+    product_image = Image.open(DIR_ADJUNTOS / "_3bcabb31-19ce-46e1-a942-103e4e2c1921.jpg")
     st.image(product_image, width=450)
