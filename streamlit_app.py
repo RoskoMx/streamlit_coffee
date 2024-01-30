@@ -50,12 +50,12 @@ load_css_file(ARCH_CSS)
 logo_image = Image.open(DIR_ADJUNTOS / "_0e0a86c1-858e-47d3-9be4-ed929efacab6.jpg")
 st.image(logo_image, width=450)
 st.header(NOMBRE_PRODUCT)
-st.subheader(SLOGAN_PRODUCT)
+st.subheader(SLOGAN_PRODUCTO)
 
 left_col, right_col = st.columns((2, 1))
 with left_col:
     st.text("")
-    st.write(DESCRIPCION_PRODUCT)
+    st.write(DESCRIPCION_PRODUCTO)
     #Se inserta un enlace HTML usando el elemento Markdown. Una opción para hacer el botón más atractivo con CSS, que se llamarpa más adelante
     st.markdown(
         f'<a href={ENLACE_DONACION} class="button"> 👉 Envoie-moi un petite café </a>',
@@ -99,7 +99,7 @@ for image, description in features.items():
 st.write("")
 st.write("---")
 st.subheader(":tv: Demo")
-st.video(DEMO_VIDEO, format="video/mp4", start_time=0)
+st.video(VIDEO_TUTORIAL, format="video/mp4", start_time=0)
 
 
 # --- FAQ ---
@@ -124,7 +124,7 @@ st.write("")
 st.write("---")
 st.subheader(":mailbox: Have A Question? Ask Away!")
 contact_form = f"""
-<form action="https://formsubmit.co/{CONTACT_EMAIL}" method="POST">
+<form action="https://formsubmit.co/{EMAIL_CONTACTO}" method="POST">
      <input type="hidden" name="_captcha" value="false">
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email" required>
