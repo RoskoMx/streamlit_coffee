@@ -1,31 +1,33 @@
-from pathlib import Path
+from pathlib import Path # Para las rutas de archivos
 
 import streamlit as st  # pip install streamlit
 from PIL import Image  # pip install pillow
 
-# --- PATH SETTINGS ---
-THIS_DIR = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-ASSETS_DIR = THIS_DIR / "assets"
-STYLES_DIR = THIS_DIR / "styles"
-CSS_FILE = STYLES_DIR / "main.css"
+# --- PATHS O RUTAS DE ACCESO A LOS ARCHIVOS ---
+DIR_ACTUAL = Path(__file__).parent if "__file__" in locals() else Path.cwd() #Path.cwd sirve para obtener el directorio actual, en caso de que no estuviera disponible
+DIR_ADJUNTOS = DIR_ACTUAL / "assets"
+DIR_ESTILOS = DIR_ACTUAL / "styles"
+ARCH_CSS = DIR_ESTILOS / "main.css"
 
 
-# --- GENERAL SETTINGS ---
-STRIPE_CHECKOUT = "https://buy.stripe.com/6oEdRj2Jp6I29qw3cd"
-CONTACT_EMAIL = "YOUREMAIL@EMAIL.COM"
-DEMO_VIDEO = "https://youtu.be/PmJ9rkKGqrI"
-PRODUCT_NAME = "Excel Add-In: MyToolBelt"
-PRODUCT_TAGLINE = "Ready To Become An Office Superhero? 🚀"
-PRODUCT_DESCRIPTION = """
-MyToolBelt saves every smart office worker time and effort when it comes to analysis with a unique set of tools you won’t find anywhere else:
+# --- CONFIGURACIONES DE VARIABLES GENERALES ---
+ENLACE_DONACION = "https://buy.stripe.com/8wM17J2J5fgD2A0eUU"
+EMAIL_CONTACTO = "GUZTAVO.MEJIA@GMAIL.COM"
+VIDEO_TUTORIAL = "https://youtu.be/PmJ9rkKGqrI"
+NOMBRE_PRODUCT = "Présentation du projet"
+NOMBRE_PRODUCT1 = "L'internet pour mes parents"
+SLOGAN_PRODUCTO = "Internet pour les débutants. 🫵"
+DESCRIPCION_PRODUCTO = """
+Page Internet conçue pour faciliter l'approche 
+des personnes extérieures à la technologie, qui 
+souhaitent rendre leur entreprise visible sur Internet.
 
-- Generate flawless Python code based on your cell selection
-- Call Python scripts from Excel without having to lift a finger
-- Create Jupyter Notebooks from Excel
-- Add tickmarks to cells and highlight key areas
-- Create an informative table of contents with ease
-- … and many more powerful features
-**This is your new superpower; why go to work without it?**
+- Avec des instructions simples
+- Sans rien installer sur votre ordinateur
+- Accompagnement personnalisé
+- S'appuyer sur des outils d'intelligence artificielle
+- ... Et bien d’autres options incroyables à explorer
+** Vous acquérez un nouveau super pouvoir. Qu'allez-vous faire pour le développer? **
 """
 
 
@@ -34,36 +36,42 @@ def load_css_file(css_file_path):
         return st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-# --- PAGE CONFIG ---
+# --- CONFIGURACIÓN DE LA PESTAÑA ---
 st.set_page_config(
-    page_title=PRODUCT_NAME,
+    page_title = NOMBRE_PRODUCT1,
     page_icon=":star:",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
-load_css_file(CSS_FILE)
+load_css_file(ARCH_CSS)
 
 
-# --- MAIN SECTION ---
-st.header(PRODUCT_NAME)
-st.subheader(PRODUCT_TAGLINE)
+# --- SECCIÓN PRINCIPAL ---
+logo_image = Image.open(DIR_ADJUNTOS / "rosko_internet.jpg")
+st.image(logo_image, width=450)
+st.header(NOMBRE_PRODUCT)
+st.subheader(SLOGAN_PRODUCT)
+
 left_col, right_col = st.columns((2, 1))
 with left_col:
     st.text("")
-    st.write(PRODUCT_DESCRIPTION)
+    st.write(DESCRIPCION_PRODUCT)
+    #Se inserta un enlace HTML usando el elemento Markdown. Una opción para hacer el botón más atractivo con CSS, que se llamarpa más adelante
     st.markdown(
-        f'<a href={STRIPE_CHECKOUT} class="button">👉 Get the add-in</a>',
-        unsafe_allow_html=True,
+        f'<a href={ENLACE_DONACION} class="button"> 👉 Envoie-moi un petite café </a>',
+        unsafe_allow_html=True, #Desea incluir HTML unsafe? True
     )
 with right_col:
-    product_image = Image.open(ASSETS_DIR / "product.png")
+    product_image = Image.open(DIR_ADJUNTOS / "rosko2.jpg")
     st.image(product_image, width=450)
 
 
-# --- FEATURES ---
+# --- MAYORES CARACTERÍSTICAS ---
 st.write("")
 st.write("---")
-st.subheader(":rocket: Features")
+st.subheader(":rocket: Ce que nous pouvons réaliser")
+#Creamos un diccionario que contiene la información de 3 secciones de características. Cada una debe tener: imagen, encabezado y descripción.
+#Nombre de la imágen, como clave del diccionario. El valor de esa clave será una lista[Dos elementos dentro, encabezado y explicación],
 features = {
     "Feature_1.png": [
         "Run Python Files From Excel",
