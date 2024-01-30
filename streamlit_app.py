@@ -99,7 +99,9 @@ for image, description in features.items():
 st.write("")
 st.write("---")
 st.subheader(":tv: Nous pouvons faire une vidéo où nous parlons différentes langues")
-st.video(VIDEO_TUTORIAL, format="video/mp4", start_time=0)#Se puede modificar la hora de inicio
+#st.video(VIDEO_TUTORIAL, format="video/mp4", start_time=0)#Se puede modificar la hora de inicio
+youtube_image = Image.open(DIR_ADJUNTOS / "Te regqlo una.png")
+st.image(youtube_image)
 
 
 # --- SECCIÓN DE PREGUNTAS Y RESPUESTAS ---
