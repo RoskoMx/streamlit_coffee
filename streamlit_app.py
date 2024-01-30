@@ -47,7 +47,7 @@ load_css_file(ARCH_CSS)
 
 
 # --- SECCIÓN PRINCIPAL ---
-logo_image = Image.open(DIR_ADJUNTOS / "rosko_inernet.png")
+logo_image = Image.open(DIR_ADJUNTOS / "rosko_internet.png")
 st.image(logo_image, width=450)
 st.header(NOMBRE_PRODUCT)
 st.subheader(SLOGAN_PRODUCTO)
