@@ -15,7 +15,7 @@ ENLACE_DONACION = "https://buy.stripe.com/8wM17J2J5fgD2A0eUU"
 EMAIL_CONTACTO = "GUZTAVO.MEJIA@GMAIL.COM"
 VIDEO_TUTORIAL = "https://www.youtube.com/watch?v=L_5IUq0SgM8"
 NOMBRE_PRODUCT = "Présentation du projet"
-NOMBRE_PRODUCT1 = ":star: Technologie pour les débutants"
+NOMBRE_PRODUCT1 = "Technologie pour les débutants"
 SLOGAN_PRODUCTO = "L'intelligence Artificiale pour les débutants. 🫵"
 DESCRIPCION_PRODUCTO = """
 Page Internet conçue pour faciliter l'approche 
