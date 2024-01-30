@@ -23,11 +23,14 @@ des personnes extérieures à la technologie, qui
 souhaitent rendre leur entreprise visible sur Internet:
 
 
+
 - Avec des instructions simples
 - Sans rien installer sur votre ordinateur
 - Accompagnement personnalisé
 - S'appuyer sur des outils d'intelligence artificielle
 - ... Et bien d’autres options incroyables à explorer
+
+
 
 
 **Vous acquérez un nouveau super pouvoir. Qu'allez-vous faire pour le développer?**
@@ -51,7 +54,7 @@ load_css_file(ARCH_CSS)
 
 # --- SECCIÓN PRINCIPAL ---
 logo_image = Image.open(DIR_ADJUNTOS / "rosko_internet.png")
-st.image(logo_image, width=300)
+st.image(logo_image, width=450)
 st.header(NOMBRE_PRODUCT)
 st.subheader(SLOGAN_PRODUCTO)
 
@@ -66,7 +69,7 @@ with left_col:
     #)
 with right_col:
     product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
-    st.image(product_image, width=450)
+    st.image(product_image, width=300)
 
 
 # --- MAYORES CARACTERÍSTICAS ---
