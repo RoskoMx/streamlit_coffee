@@ -13,24 +13,24 @@ ARCH_CSS = DIR_ESTILOS / "main.css"
 # --- CONFIGURACIONES DE VARIABLES GENERALES ---
 ENLACE_DONACION = "https://buy.stripe.com/8wM17J2J5fgD2A0eUU"
 EMAIL_CONTACTO = "GUZTAVO.MEJIA@GMAIL.COM"
-VIDEO_TUTORIAL = "https://youtu.be/PmJ9rkKGqrI"
+VIDEO_TUTORIAL = "https://www.youtube.com/shorts/4AqZ8QUKeAA"
 NOMBRE_PRODUCT = "Présentation du projet"
 NOMBRE_PRODUCT1 = "L'internet pour mes parents"
-SLOGAN_PRODUCTO = "Internet pour les débutants. 🫵"
+SLOGAN_PRODUCTO = "L'intelligence Artificiale pour les débutants. 🫵"
 DESCRIPCION_PRODUCTO = """
 Page Internet conçue pour faciliter l'approche 
 des personnes extérieures à la technologie, qui 
-souhaitent rendre leur entreprise visible sur Internet.
+souhaitent rendre leur entreprise visible sur Internet:
 
 - Avec des instructions simples
 - Sans rien installer sur votre ordinateur
 - Accompagnement personnalisé
 - S'appuyer sur des outils d'intelligence artificielle
 - ... Et bien d’autres options incroyables à explorer
-** Vous acquérez un nouveau super pouvoir. Qu'allez-vous faire pour le développer? **
+**Vous acquérez un nouveau super pouvoir. Qu'allez-vous faire pour le développer?**
 """
 
-
+#Una vez teniendo el CSS se define la función y se ejecuta justo después de la config de pestaña
 def load_css_file(css_file_path):
     with open(css_file_path) as f:
         return st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
@@ -47,7 +47,7 @@ load_css_file(ARCH_CSS)
 
 
 # --- SECCIÓN PRINCIPAL ---
-logo_image = Image.open(DIR_ADJUNTOS / "_0e0a86c1-858e-47d3-9be4-ed929efacab6.jpg")
+logo_image = Image.open(DIR_ADJUNTOS / "rosko_inernet.png")
 st.image(logo_image, width=450)
 st.header(NOMBRE_PRODUCT)
 st.subheader(SLOGAN_PRODUCTO)
@@ -90,46 +90,51 @@ for image, description in features.items():
     image = Image.open(DIR_ADJUNTOS / image)
     st.write("")
     left_col, right_col = st.columns(2)
-    left_col.image(image, use_column_width=True)
-    right_col.write(f"**{description[0]}**")
+    left_col.image(image, use_column_width=True) #Mismo ancho
+    right_col.write(f"**{description[0]}**") #Fuente en negritas
     right_col.write(description[1])
 
 
-# --- DEMO ---
+# --- VIDEO DEMO ---
 st.write("")
 st.write("---")
-st.subheader(":tv: Demo")
-st.video(VIDEO_TUTORIAL, format="video/mp4", start_time=0)
+st.subheader(":tv: Nous pouvons faire une vidéo où nous parlons différentes langues")
+st.video(VIDEO_TUTORIAL, format="video/mp4", start_time=0)#Se puede modificar la hora de inicio
 
 
-# --- FAQ ---
+# --- SECCIÓN DE PREGUNTAS Y RESPUESTAS ---
 st.write("")
 st.write("---")
-st.subheader(":raising_hand: FAQ")
+st.subheader(":raising_hand: FAQ Section")
+#Este es un diccionario donde la clave es la pregunta y su respuesta será su valor
 faq = {
-    "Question 1": "Some text goes here to answer question 1",
-    "Question 2": "Some text goes here to answer question 2",
-    "Question 3": "Some text goes here to answer question 3",
-    "Question 4": "Some text goes here to answer question 4",
-    "Question 5": "Some text goes here to answer question 5",
+    "": "Some text goes here to answer question 1",
+    "Est-il nécessaire de payer quelque chose pour utiliser tout cela?": "Dans ce projet, nous cherchons à rapprocher les gens de la technologie sans avoir à dépenser un seul euro",
+    "Dois-je installer un certain type de programme sur mon ordinateur?": "Absolument rien, tous les outils que nous présentons ici sont disponibles sur internet",
+    "Puis-je utiliser cet exemple de page pour créer mon propre projet?": "Bien entendu, il vous suffit d’inclure vos propres images et de décrire votre projet avec vos propres mots.",
+    "Où puis-je contacter le créateur pour poser une question spécifique ?": "Toutes les informations de contact figurent dans la section suivante",
 }
+#Recorremos el diccionario y mostramos respuesta en elemento expandible
 for question, answer in faq.items():
     with st.expander(question):
         st.write(answer)
 
 
-# --- CONTACT FORM ---
-# video tutorial: https://youtu.be/FOULV9Xij_8
-st.write("")
+# --- FORMULARIO DE CONTACTO ---
+#Colocamos un formulario HTML en modo streamlit usando un elemento de rebajas
+#Más información en: https://youtu.be/FOULV9Xij_8
 st.write("---")
-st.subheader(":mailbox: Have A Question? Ask Away!")
+st.subheader(":mailbox: N'hésitez pas à m'envoyer un message. Je serai heureux de vous aider.!")
 contact_form = f"""
 <form action="https://formsubmit.co/{EMAIL_CONTACTO}" method="POST">
      <input type="hidden" name="_captcha" value="false">
-     <input type="text" name="name" placeholder="Your name" required>
-     <input type="email" name="email" placeholder="Your email" required>
-     <textarea name="message" placeholder="Your message here"></textarea>
-     <button type="submit" class="button">Send ✉</button>
+     <input type="text" name="name" placeholder="Votre nome" required>
+     <input type="email" name="email" placeholder="Votre email" required>
+     <textarea name="message" placeholder="Votre question ou message ici"></textarea>
+     <button type="submit" class="button">Envoyer ✉</button>
 </form>
 """
+#Por sí solo, el botón no está presentable. Recurrimos al archivo CSS
+
+#Para los detalles del fondo blanco, se crea una nueva carpeta llamada .streamlit con un archivo "config.toml
 st.markdown(contact_form, unsafe_allow_html=True)
