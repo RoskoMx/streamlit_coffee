@@ -1,6 +1,7 @@
 from pathlib import Path # Para las rutas de archivos
-
-import streamlit as st  # pip install streamlit
+import requests
+import streamlit as st
+from streamlit_lottie import st_lottie
 from PIL import Image  # pip install pillow
 
 # --- PATHS O RUTAS DE ACCESO A LOS ARCHIVOS ---
@@ -36,6 +37,14 @@ souhaitent rendre leur entreprise visible sur Internet:
 **Vous acquérez un nouveau super pouvoir. Qu'allez-vous faire pour le développer?**
 """
 
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code !=200:
+        return None
+    return r.json()
+
+lottie_file ="https://assets9.lottiefiles.com/packages/lf20_ggwq3ysg.json"
+
 #Una vez teniendo el CSS se define la función y se ejecuta justo después de la config de pestaña
 def load_css_file(css_file_path):
     with open(css_file_path) as f:
@@ -68,9 +77,9 @@ with left_col:
         #unsafe_allow_html=True, #Desea incluir HTML unsafe? True
     #)
 with right_col:
-    product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
-    st.image(product_image, width=300)
-
+    #product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
+    #st.image(product_image, width=300)
+    st_lottie(load_lottieurl(lottie_file), height=400)
 
 # --- MAYORES CARACTERÍSTICAS ---
 st.write("")
