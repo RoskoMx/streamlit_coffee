@@ -59,7 +59,7 @@ st.image(logo_image, width=450)
 st.header(NOMBRE_PRODUCT)
 st.subheader(SLOGAN_PRODUCTO)
 
-left_col, right_col = st.columns((2, 1))
+left_col, right_col = st.columns((1, 1))
 with left_col:
     st.text("")
     st.write(DESCRIPCION_PRODUCTO)
