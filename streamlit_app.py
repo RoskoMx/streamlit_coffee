@@ -70,7 +70,7 @@ with left_col:
     #)
 with right_col:
     product_image = Image.open(DIR_ADJUNTOS / "_78b21d3a-8a30-41e0-b5e0-9407987b880c.jpg")
-    st.image(product_image, width=300)
+    st.image(product_image, width=400)
     
 # --- MAYORES CARACTERÍSTICAS ---
 st.write("")
