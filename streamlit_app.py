@@ -46,7 +46,7 @@ def load_css_file(css_file_path):
 # --- CONFIGURACIÓN DE LA PESTAÑA ---
 st.set_page_config(
     page_title = NOMBRE_PRODUCT1,
-    page_icon=":star:",
+    page_icon="🌐",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
