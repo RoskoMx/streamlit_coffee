@@ -48,7 +48,7 @@ st.set_page_config(
     page_title = NOMBRE_PRODUCT1,
     page_icon="🌐",
     layout="centered",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="expanded", #No aparece porque no se llama (creo)
 )
 load_css_file(ARCH_CSS)
 
