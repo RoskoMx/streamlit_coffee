@@ -43,12 +43,12 @@ def load_css_file(css_file_path):
         return st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-# --- CONFIGURACIÓN DE LA PESTAÑA ---
+# --- CONFIGURACIÓN GENERAL DE LA PÁGINA (PESTAÑA, DISTRIBUCIÓN, BARRA) ---
 st.set_page_config(
     page_title = NOMBRE_PRODUCT1,
     page_icon="🌐",
     layout="centered",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
 load_css_file(ARCH_CSS)
 
