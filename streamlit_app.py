@@ -1,7 +1,5 @@
 from pathlib import Path # Para las rutas de archivos
-#import requests
 import streamlit as st
-#from streamlit_lottie import st_lottie
 from PIL import Image  # pip install pillow
 
 # --- PATHS O RUTAS DE ACCESO A LOS ARCHIVOS ---
@@ -13,15 +11,15 @@ ARCH_CSS = DIR_ESTILOS / "main.css"
 
 # --- CONFIGURACIONES DE VARIABLES GENERALES ---
 ENLACE_DONACION = "https://buy.stripe.com/8wM17J2J5fgD2A0eUU"
-EMAIL_CONTACTO = "GUZTAVO.MEJIA@GMAIL.COM"
+EMAIL_CONTACTO = "cbi2153043631@izt.uam.mx"
 VIDEO_TUTORIAL = "https://www.youtube.com/watch?v=HQdZgEL2Xbs"
 NOMBRE_PRODUCT = "Présentation du projet"
 NOMBRE_PRODUCT1 = "Technologie pour les débutants"
-SLOGAN_PRODUCTO = "L'intelligence Artificiale pour les débutants. 🫵"
+SLOGAN_PRODUCTO = "Internet, technologie et intelligence artificielle pour les débutants. 🫵"
 DESCRIPCION_PRODUCTO = """
 Page Internet conçue pour faciliter l'approche 
 des personnes extérieures à la technologie, qui 
-souhaitent rendre leur entreprise visible sur Internet:
+souhaitent rendre vos ideés visibles sur Internet:
 
 
 
@@ -48,14 +46,14 @@ st.set_page_config(
     page_title = NOMBRE_PRODUCT1,
     page_icon="🌐",
     layout="centered",
-    initial_sidebar_state="expanded", #No aparece porque no se llama (creo)
+    initial_sidebar_state="expanded", #No aparece porque no se llama
 )
 load_css_file(ARCH_CSS)
 
 
 # --- SECCIÓN PRINCIPAL ---
 logo_image = Image.open(DIR_ADJUNTOS / "rosko_internet.png")
-st.image(logo_image, width=450)
+st.image(logo_image, width=None)
 st.header(NOMBRE_PRODUCT)
 st.subheader(SLOGAN_PRODUCTO)
 
@@ -63,7 +61,7 @@ left_col, right_col = st.columns((1, 1))
 with left_col:
     st.text("")
     st.write(DESCRIPCION_PRODUCTO)
-    #Se inserta un enlace HTML usando el elemento Markdown. Una opción para hacer el botón más atractivo con CSS, que se llamarpa más adelante
+    #Se inserta un enlace HTML usando el elemento Markdown. Una opción para hacer el botón más atractivo con CSS, que se llamará más adelante
     #st.markdown(
         #f'<a href={ENLACE_DONACION} class="button"> 👉 Envoie-moi un petite café </a>',
         #unsafe_allow_html=True, #Desea incluir HTML unsafe? True
