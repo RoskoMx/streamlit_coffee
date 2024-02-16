@@ -21,7 +21,7 @@ Proyectos fácilmente repicables sin la necesidad de instalar nada en tu ordenar
 ## Apóyame un poquito para seguir continuando este trabajo
 Love my content and want to show appreciation? Why not [buy me a coffee](https://buy.stripe.com/8wM17J2J5fgD2A0eUU) to fuel my creative engine? Your support means the world to me! 😊
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://pythonandvba.com/coffee-donation)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/roskomx)
 
 ## Feedback
 ¿Tienes algunas sugerencias y comentarios? No dudes en enviarme un mensaje a guztavo.mejia@gmail.com. ¡Me encantaría saber de ti! 💡
